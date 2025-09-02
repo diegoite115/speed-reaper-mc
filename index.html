@@ -149,26 +149,41 @@
         </section>
 
         <!-- Únete Section -->
-        <section id="unete" class="py-20 bg-gray-900">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl md:text-5xl font-logo mb-4">¿Listo para Rodar?</h2>
-                <div class="w-24 h-1 bg-amber-500 mx-auto mb-8"></div>
-                <p class="max-w-2xl mx-auto mb-10 text-gray-300">Si compartes nuestra pasión y valores, nos encantaría conocerte. Envíanos un mensaje y te contactaremos para invitarte a una de nuestras próximas reuniones.</p>
-                <form id="contact-form" class="max-w-xl mx-auto">
-                    <div class="grid md:grid-cols-2 gap-4 mb-4">
-                        <input type="text" placeholder="Tu Nombre" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-amber-500" required>
-                        <input type="email" placeholder="Tu Email" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-amber-500" required>
-                    </div>
-                    <div class="mb-4">
-                        <textarea placeholder="Tu Mensaje" rows="5" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-amber-500" required></textarea>
-                    </div>
-                    <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-3 px-8 rounded-lg uppercase tracking-wider transition-colors">
-                        Enviar Mensaje
-                    </button>
-                </form>
-                 <div id="form-message" class="mt-4 text-lg"></div>
-            </div>
-        </section>
+       <section id="contacto" class="bg-gray-800 py-20 px-6">
+  <h2 class="text-3xl font-bold text-yellow-400 mb-10 text-center">Contacto</h2>
+  <form action="https://formspree.io/f/tuID" method="POST" class="max-w-lg mx-auto bg-gray-900 p-8 rounded-xl shadow-lg space-y-4">
+    <input type="text" name="nombre" placeholder="Tu nombre" required class="w-full p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:border-yellow-400" />
+    <input type="email" name="_replyto" placeholder="Tu correo" required class="w-full p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:border-yellow-400" />
+    <textarea name="mensaje" rows="4" placeholder="Tu mensaje" required class="w-full p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:border-yellow-400"></textarea>
+    <input type="hidden" name="_gotcha" />
+    <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 rounded-lg">Enviar</button>
+  </form>
+  <script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const formData = new FormData(this);
+      fetch('https://formspree.io/f/xanddevv', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          alert('¡Gracias por contactarnos!');
+          this.reset();
+        } else {
+          alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    });
+  </script>
+</section>
     </main>
 
     <!-- Footer -->
@@ -233,5 +248,6 @@
     </script>
 </body>
 </html>
+
 
 
