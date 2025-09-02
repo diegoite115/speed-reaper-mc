@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club de Motos - Speed Reaper</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Nueva tipografía similar al logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        /* Clase para la nueva tipografía */
+        .font-logo {
+            font-family: 'Metal Mania', cursive;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://placehold.co/1920x1080/000000/FFFFFF?text=Motos+en+la+Sangre');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header con el logo -->
+    <header id="header" class="bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-3 py-2 flex justify-between items-center">
+            <a href="#inicio" class="flex-shrink-0">
+                <!-- Imagen del logo que subiste -->
+           
+               <img src="LOGOS\LOGO_SPR.PNG" alt="Speed Reaper Logo" class="h-16 w-auto">
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="hover:text-amber-400 transition-colors">Inicio</a>
+                <a href="#nosotros" class="hover:text-amber-400 transition-colors">Nosotros</a>
+                <a href="#rutas" class="hover:text-amber-400 transition-colors">Rutas</a>
+                <a href="#galeria" class="hover:text-amber-400 transition-colors">Galería</a>
+                <a href="#unete" class="hover:text-amber-400 transition-colors">Únete al Club</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#inicio" class="block py-2 px-6 text-sm hover:bg-gray-800">Inicio</a>
+            <a href="#nosotros" class="block py-2 px-6 text-sm hover:bg-gray-800">Nosotros</a>
+            <a href="#rutas" class="block py-2 px-6 text-sm hover:bg-gray-800">Rutas</a>
+            <a href="#galeria" class="block py-2 px-6 text-sm hover:bg-gray-800">Galería</a>
+            <a href="#unete" class="block py-2 px-6 text-sm hover:bg-gray-800">Únete al Club</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg h-screen flex items-center justify-center text-center">
+        <div class="container mx-auto px-6">
+            <!-- Título con la nueva tipografía -->
+            <h1 class="text-5xl md:text-8xl font-logo tracking-wider mb-4">Speed Reaper M.C.</h1>
+            <p class="text-lg md:text-2xl mb-8 max-w-3xl mx-auto text-gray-300">El rugido del motor es nuestra canción. La carretera, nuestro hogar.</p>
+            <a href="#unete" class="bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-3 px-8 rounded-lg uppercase tracking-wider transition-colors">
+                Únete a la Hermandad
+            </a>
+        </div>
+    </section>
+
+    <main>
+        <!-- Sobre Nosotros Section -->
+        <section id="nosotros" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-logo mb-4">Nuestra Historia</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto mb-8"></div>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Logo del club en la sección -->
+                    <img src="LOGOS\LOGO_SPR.PNG" alt="Logo del club de motos Speed Reaper" class="rounded-lg w-full max-w-sm mx-auto">
+                    <p class="text-gray-300 text-left">
+                        Más que un club, somos una familia unida por el asfalto y la pasión por las dos ruedas. Speed Reaper nació del deseo de compartir kilómetros, experiencias y una lealtad inquebrantable. Para nosotros, cada ruta es una nueva aventura y cada miembro es un hermano. Respeto, libertad y camaradería son los pilares que nos definen.
+                        <br><br>
+                        Recorremos el país buscando nuevos horizontes, siempre juntos, apoyándonos en cada curva del camino. No importa la marca de tu moto, sino el espíritu biker que llevas dentro.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rutas Section -->
+        <section id="rutas" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-logo mb-4">Próximos Eventos y Rutas</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto mb-12"></div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Event Card 1 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF?text=Ruta+a+la+Sierra" alt="Paisaje de sierra" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-logo mb-2">Ruta a la Sierra Gorda</h3>
+                            <p class="text-amber-400 font-semibold mb-3">20 de Septiembre, 2025</p>
+                            <p class="text-gray-400 text-sm">Una aventura de fin de semana por las impresionantes curvas y paisajes de la Sierra Gorda. Punto de reunión por confirmar.</p>
+                        </div>
+                    </div>
+                    <!-- Event Card 2 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF?text=Aniversario+del+Club" alt="Motos estacionadas en evento" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-logo mb-2">8º Aniversario del Club</h3>
+                            <p class="text-amber-400 font-semibold mb-3">15 de Octubre, 2025</p>
+                            <p class="text-gray-400 text-sm">¡Celebraremos nuestro aniversario con música en vivo, comida y la mejor compañía! Evento abierto a todos los clubes amigos.</p>
+                        </div>
+                    </div>
+                    <!-- Event Card 3 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF?text=Rodada+Benéfica" alt="Grupo de motociclistas" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-logo mb-2">Rodada Benéfica Anual</h3>
+                            <p class="text-amber-400 font-semibold mb-3">5 de Noviembre, 2025</p>
+                            <p class="text-gray-400 text-sm">Rodaremos para recaudar fondos y juguetes para niños de escasos recursos. ¡Tu participación hace la diferencia!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Galeria Section -->
+        <section id="galeria" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-logo mb-4">Momentos en la Carretera</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto mb-12"></div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/500x700/1F2937/FFFFFF?text=Foto+1" alt=""></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/500x500/1F2937/FFFFFF?text=Foto+2" alt=""></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/500x500/1F2937/FFFFFF?text=Foto+3" alt=""></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/500x800/1F2937/FFFFFF?text=Foto+4" alt=""></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/500x750/1F2937/FFFFFF?text=Foto+5" alt=""></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/500x400/1F2937/FFFFFF?text=Foto+6" alt=""></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/500x600/1F2937/FFFFFF?text=Foto+7" alt=""></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/500x600/1F2937/FFFFFF?text=Foto+8" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Únete Section -->
+        <section id="unete" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-logo mb-4">¿Listo para Rodar?</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto mb-8"></div>
+                <p class="max-w-2xl mx-auto mb-10 text-gray-300">Si compartes nuestra pasión y valores, nos encantaría conocerte. Envíanos un mensaje y te contactaremos para invitarte a una de nuestras próximas reuniones.</p>
+                <form id="contact-form" class="max-w-xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <input type="text" placeholder="Tu Nombre" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                        <input type="email" placeholder="Tu Email" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                    </div>
+                    <div class="mb-4">
+                        <textarea placeholder="Tu Mensaje" rows="5" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-amber-500" required></textarea>
+                    </div>
+                    <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-3 px-8 rounded-lg uppercase tracking-wider transition-colors">
+                        Enviar Mensaje
+                    </button>
+                </form>
+                 <div id="form-message" class="mt-4 text-lg"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2025 Speed Reaper M.C. | Todos los derechos reservados.</p>
+            <p>Diseñado con la libertad del viento.</p>
+             <!-- Social Icons -->
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" aria-label="Facebook" class="hover:text-amber-400 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.35C0 23.407.593 24 1.325 24H12.82v-9.29H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.732 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+                </a>
+                <a href="#" aria-label="Instagram" class="hover:text-amber-400 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.585-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.585-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.585.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Form submission message
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            formMessage.textContent = '¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.';
+            formMessage.classList.add('text-amber-400');
+            contactForm.reset();
+            setTimeout(() => {
+                formMessage.textContent = '';
+                formMessage.classList.remove('text-amber-400');
+            }, 5000);
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.remove('py-2');
+            }
+        });
+
+    </script>
+</body>
+</html>
+
