@@ -149,44 +149,35 @@
             </div>
         </section>
 
-        <!-- Únete Section -->
-     <section id="contacto" class="bg-gray-800 py-20 px-6">
-  <h2 class="text-3xl font-bold text-yellow-400 mb-10 text-center">Contacto</h2>
-  <form id="contactForm" class="max-w-lg mx-auto bg-gray-900 p-8 rounded-xl shadow-lg space-y-4">
-    <input type="text" name="nombre" placeholder="Tu nombre" required class="w-full p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:border-yellow-400" />
-    <input type="email" name="_replyto" placeholder="Tu correo" required class="w-full p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:border-yellow-400" />
-    <textarea name="mensaje" rows="4" placeholder="Tu mensaje" required class="w-full p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:border-yellow-400"></textarea>
-    <input type="hidden" name="_gotcha" />
-    <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 rounded-lg">Enviar</button>
-  </form>
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const formData = new FormData(this);
-      fetch('https://formspree.io/f/your-unique-id', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          alert('¡Gracias por contactarnos!');
-          this.reset();
-        } else {
-          console.error('Error en la respuesta de Formspree:', data);
-          alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo. Detalles del error en la consola.');
-        }
-      })
-      .catch(error => {
-        console.error('Error en la solicitud a Formspree:', error);
-        alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo. Detalles del error en la consola.');
-      });
-    });
-  </script>
-</section>
+        <!-- Sección Contacto -->
+        <section id="contacto" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-5xl font-bold text-center mb-4 text-white">Contacto</h2>
+                <p class="text-center text-gray-400 mb-12 max-w-xl mx-auto">¿Interesado en unirte o tienes alguna pregunta? Envíanos un mensaje.</p>
+                <div class="max-w-2xl mx-auto bg-gray-800 p-8 rounded-lg border border-gray-700">
+                    <form action="https://formspree.io/f/xanddevv" method="POST">
+                        <div class="mb-5">
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-300">Nombre</label>
+                            <input type="text" id="name" name="name" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5" placeholder="Tu nombre completo" required>
+                        </div>
+                        <div class="mb-5">
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-300">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5" placeholder="tu.correo@ejemplo.com" required>
+                        </div>
+                        <div class="mb-5">
+                            <label for="whatsapp" class="block mb-2 text-sm font-medium text-gray-300">WhatsApp</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5" placeholder="+52 55 1234 5678" required>
+                        </div>
+                        <div class="mb-5">
+                            <label for="comments" class="block mb-2 text-sm font-medium text-gray-300">Comentarios</label>
+                            <textarea id="comments" name="comments" rows="4" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-3 text-center uppercase tracking-wider">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
@@ -251,6 +242,7 @@
     </script>
 </body>
 </html>
+
 
 
 
